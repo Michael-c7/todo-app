@@ -43,7 +43,6 @@ input.removeEventListener("focus", inputFunctionFocus)
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    /* background:rgb(180, 180, 180); */
     background:#efefef;
 }
 
@@ -73,7 +72,6 @@ a {
     display:flex;
     justify-content: center;
     align-items:center;
-
     filter:drop-shadow(4px 4px 2px #3a3a3a1f);
 }
 
@@ -81,27 +79,26 @@ a {
     position: relative;
     left:50%;
     transform: translateX(-50%);
-
     border:1px #000 solid;
     width:25rem;
     font-size:26px;
-
     margin:2rem 0;
     outline:0;
-
     height:inherit;
     height:3rem;
 }
 
 
 .add-btn {
-    background:#fff;
+    background:#000;
+    color:#fff;
     font-size:24px;
     padding:0rem 2rem;
     height:3rem;
     border:1px solid black;
     border-left:none;
     transition: opacity ease 0.1ms;
+    border-left:none;
 }
 
 .add-btn:hover {

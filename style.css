@@ -84,9 +84,14 @@ a {
     width:25rem;
     font-size:26px;
     margin:2rem 0;
-    outline:0;
     height:inherit;
     height:3rem;
+    outline:0;
+    /* caret-color:transparent; */
+}
+
+.todo__input:focus {
+    border-width:2px;
 }
 
 
@@ -121,7 +126,6 @@ a {
     grid-template-columns: 1fr 1rem;
     justify-content: center;
     align-items:center;
-
     font-size:24px;
     letter-spacing: 0.25px;
     background:#fff;
@@ -153,18 +157,19 @@ a {
 }
 
 .todo__task__delete-btn:active {
+    color:#e74c3c;
     opacity:0.85;
 }
+
 
 .todo__delete-all-btn {
     position: relative;
     color:#fff;
     background-color:#e74c3c;
     filter:drop-shadow(4px 4px 2px #3a3a3a1f);
-    font-size:42px;
+    font-size:32px;
     padding:1rem 2rem;
     border-radius: 5px;
-
     left:50%;
     transform:translateX(-50%);
     margin:4rem 0;
@@ -180,7 +185,7 @@ a {
 }
 
 
-
+/*mobile view*/
 @media(max-width:500px) {
     .todo__input {
         width:100%;

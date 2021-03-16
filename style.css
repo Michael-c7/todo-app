@@ -1,0 +1,189 @@
+*,*::before,*::after {
+    box-sizing: border-box;
+    padding:0;
+    margin:0;
+}
+
+li {
+    list-style-type: none;
+}
+
+img {
+    max-width:100%;
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*
+traversing the dom
+-----
+.parentElement
+.children
+.firstElementChild
+.previousElementSibling
+.nextElementSibling
+*/
+
+
+/*JAVASCRIPT events
+
+- can do inline
+<button class="my-btn" onClick="console.log('you clicked the btn')">my button</button>
+
+
+- add  event in js
+input.addEventListener("focus", inputFunctionFocus)
+
+- remove event in js
+input.removeEventListener("focus", inputFunctionFocus)
+*/
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    /* background:rgb(180, 180, 180); */
+    background:#efefef;
+}
+
+button {
+    background:none;
+    border:none;
+    display:block;
+    color:inherit;
+}
+
+a {
+    text-decoration: none;
+    color:inherit;
+}
+
+
+
+
+.todo {
+    background:#efefef;
+    position: relative;
+    padding:1rem 0;
+}
+
+.search-container {
+    display:flex;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+
+    filter:drop-shadow(4px 4px 2px #3a3a3a1f);
+}
+
+.todo__input {
+    position: relative;
+    left:50%;
+    transform: translateX(-50%);
+
+    border:1px #000 solid;
+    width:25rem;
+    font-size:26px;
+
+    margin:2rem 0;
+    outline:0;
+
+    height:inherit;
+    height:3rem;
+}
+
+
+.add-btn {
+    background:#fff;
+    font-size:24px;
+    padding:0rem 2rem;
+    height:3rem;
+    border:1px solid black;
+    border-left:none;
+    transition: opacity ease 0.1ms;
+}
+
+.add-btn:hover {
+    cursor: pointer;
+    opacity:0.8;
+}
+
+.add-btn:active {
+    opacity:1;
+}
+
+
+.todo__tasks {
+    text-align:center;
+}
+
+.todo__task {
+    display:grid;
+    grid-template-columns: 1fr 1rem;
+    justify-content: center;
+    align-items:center;
+
+    font-size:24px;
+
+    background:#fff;
+    margin:1rem auto;
+    padding:1rem 0;
+    width:90%;
+    border-radius: 5px;
+    filter:drop-shadow(2px 2px 4px rgba(49, 46, 46, 0.39));
+    transition: all ease 0.3s;
+
+    max-width:60rem;
+}
+
+.todo__task:hover {
+    filter:drop-shadow(10px 10px 4px rgba(49, 46, 46, 0.288));
+}
+
+
+.todo__task__delete-btn {
+    font-size:32px;
+    justify-self:end;
+    transition: color 0.2s ease;
+    margin-right:1.85rem;
+    padding-top:0.1rem;
+
+}
+
+.todo__task__delete-btn:hover {
+    cursor: pointer;
+    color:#e74c3c;
+}
+
+
+.todo__delete-all-btn {
+    position: relative;
+    color:#fff;
+    background-color:#e74c3c;
+    filter:drop-shadow(4px 4px 2px #3a3a3a1f);
+    font-size:42px;
+    padding:1rem 2rem;
+    border-radius: 5px;
+
+    left:50%;
+    transform:translateX(-50%);
+    margin:4rem 0;
+}
+
+.todo__delete-all-btn:hover {
+    cursor: pointer;
+    opacity:0.8;
+}
+
+.todo__delete-all-btn:active {
+    opacity:1;
+}
+
+
+
+@media(max-width:500px) {
+    .todo__input {
+        width:100%;
+    }
+}

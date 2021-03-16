@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Todo</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+
+        <main class="todo">
+           <div class="search-container">
+            <label>
+                <input class="todo__input" type="text">
+            </label>
+            <button class="add-btn">Add</button>
+           </div>
+
+            <ul class="todo__tasks">
+                <li class="todo__task">
+                    <span class="todo__task__text">eat lunch</span>
+                    <button class="todo__task__delete-btn">&times;</button>
+                </li>
+
+                <li class="todo__task">
+                    <span class="todo__task__text">eat dinner</span>
+                    <button class="todo__task__delete-btn">&times;</button>
+                </li>
+
+                <li class="todo__task">
+                    <span class="todo__task__text">shovel snow</span>
+                    <button class="todo__task__delete-btn">&times;</button>
+                </li>
+
+                <li class="todo__task">
+                    <span class="todo__task__text">go to work</span>
+                    <button class="todo__task__delete-btn">&times;</button>
+                </li>
+
+                <li class="todo__task">
+                    <span class="todo__task__text">watch tv</span>
+                    <button class="todo__task__delete-btn">&times;</button>
+                </li>
+            </ul>
+
+
+            <button class="todo__delete-all-btn">Delete All</button>
+
+        </main>
+
+
+
+        <script src="app.js" async defer></script>
+    </body>
+</html>

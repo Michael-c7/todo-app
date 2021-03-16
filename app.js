@@ -31,10 +31,16 @@ textInput.addEventListener("input", userInput);
 
 
 
-/*add the input to the list w/ the add button*/
-function addUserInputToTodoList() {
-    /*fragment*/
-        const docFrag = document.createDocumentFragment();
+function clearUserInput() {
+    return textInput.value = "";
+}
+
+
+
+
+
+function TodoTaskFragment() {
+    const docFrag = document.createDocumentFragment();
         let todoTask = document.createElement("li");
         let todoTaskText = document.createElement("span");
         let todoTaskDeleteBtn = document.createElement("button");
@@ -51,10 +57,26 @@ function addUserInputToTodoList() {
         todoTask.appendChild(todoTaskText);
         todoTask.appendChild(todoTaskDeleteBtn);
         todoTaskDeleteBtn.appendChild(todoTaskDeleteBtnIcon);
-    /*append the document fragment to the DOM(todo__tasks)*/
+    /*append the document fragment to the DOM(.todo__tasks)*/
     todoTasks.appendChild(docFrag);
 }
+
+
+/*add the input to the list w/ the add button*/
+function addUserInputToTodoList() {
+    /*fragment*/
+    TodoTaskFragment()
+
+
+    /* clear the input after you
+    add an item to the list of tasks*/
+    clearUserInput()
+}
 addInputBtn.addEventListener("click", addUserInputToTodoList);
+
+
+
+
 
 
 
@@ -67,9 +89,12 @@ function deleteTaskBtn(event) {
     let currentItem = event.target.closest(".todo__task");
 
 
+    // instead of both the thing only this
+    //  event.target.closest(".fa-times").parentElement;
+
     // check if your currently clicking on the delete button
     if(event.target === icon || event.target === deleteBtn) {
-        let confirmTaskDeletion = confirm("Do you want to delete this task?");
+        let confirmTaskDeletion = confirm("Are you sure you want to delete this task?");
         if(confirmTaskDeletion) {
             currentItem.remove();
         }

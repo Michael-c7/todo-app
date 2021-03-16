@@ -121,6 +121,7 @@ a {
     text-align:center;
 }
 
+
 .todo__task {
     display:grid;
     grid-template-columns: 1fr 1rem;
@@ -191,3 +192,6 @@ a {
         width:100%;
     }
 }
+
+
+

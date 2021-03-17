@@ -5,24 +5,11 @@ let deleteAllBtn = document.querySelector(".todo__delete-all-btn")
 
 
 
-/*TODO
-1. get input value from the input [DONE]
-
-2. add the input to the list w/ the add button [DONE]
-
-3. delete the current item in the list w/ the delete button [DONE]
-
-4. delete all the items w/ the delete all btn [DONE]
-
-5. put the todo tasks into local storage
-*/
-
-
-
 
 
 /*get the user input value from the input box*/
 function userInput() {
+    // add frag to local storage
     return textInput.value;
 }
 textInput.addEventListener("input", userInput);
@@ -39,7 +26,7 @@ function clearUserInput() {
 
 
 
-function TodoTaskFragment() {
+function todoTaskFragment() {
     const docFrag = document.createDocumentFragment();
         let todoTask = document.createElement("li");
         let todoTaskText = document.createElement("span");
@@ -59,13 +46,20 @@ function TodoTaskFragment() {
         todoTaskDeleteBtn.appendChild(todoTaskDeleteBtnIcon);
     /*append the document fragment to the DOM(.todo__tasks)*/
     todoTasks.appendChild(docFrag);
+    /*to place at the top of the list instead use insert before
+    https://developer.mozilla.org/en-US/docs/Web/API/Node/insertBefore*/
 }
+
+
+
 
 
 /*add the input to the list w/ the add button*/
 function addUserInputToTodoList() {
     /*fragment*/
-    TodoTaskFragment()
+    todoTaskFragment()
+
+
 
 
     /* clear the input after you
@@ -73,10 +67,6 @@ function addUserInputToTodoList() {
     clearUserInput()
 }
 addInputBtn.addEventListener("click", addUserInputToTodoList);
-
-
-
-
 
 
 
